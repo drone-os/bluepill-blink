@@ -26,5 +26,9 @@ thr::nvic! {
             /// All classes of faults.
             pub hard_fault;
         };
+        interrupts => {
+            /// RCC global interrupt.
+            5: pub rcc;
+        };
     };
 }
