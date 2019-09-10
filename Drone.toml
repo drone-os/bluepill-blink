@@ -1,0 +1,35 @@
+[memory.flash]
+size = "128K"
+origin = 0x08000000
+
+[memory.ram]
+size = "20K"
+origin = 0x20000000
+
+[heap.main]
+size = "10K"
+pools = [
+    { block = "4", capacity = 118 },
+    { block = "8", capacity = 148 },
+    { block = "20", capacity = 82 },
+    { block = "56", capacity = 34 },
+    { block = "116", capacity = 16 },
+    { block = "208", capacity = 8 },
+    { block = "336", capacity = 3 },
+    { block = "512", capacity = 1 },
+]
+
+[linker]
+platform = "arm"
+
+[probe]
+gdb-client-command = "gdb-multiarch"
+
+[probe.bmp]
+device = "stm32f103"
+gdb-endpoint = "/dev/ttyBmpGdb"
+
+[log.swo]
+reset-freq = 8000000
+baud-rate = 115200
+serial-endpoint = "/dev/ttyBmpTarg"
