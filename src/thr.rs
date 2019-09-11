@@ -25,6 +25,8 @@ thr::nvic! {
         exceptions => {
             /// All classes of faults.
             pub hard_fault;
+            /// System tick timer.
+            pub sys_tick;
         };
         interrupts => {
             /// RCC global interrupt.

@@ -8,3 +8,6 @@ pub const PLL_MULT: u32 = 9;
 
 /// System clock frequency.
 pub const SYS_CLK: u32 = HSE_FREQ * PLL_MULT;
+
+/// SysTick clock frequency.
+pub const SYS_TICK_FREQ: u32 = SYS_CLK / 8;
